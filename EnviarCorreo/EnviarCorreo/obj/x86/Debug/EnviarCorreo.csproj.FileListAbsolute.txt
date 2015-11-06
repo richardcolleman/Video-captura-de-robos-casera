@@ -1,0 +1,27 @@
+C:\Users\STALIN\Documents\Visual Studio 2010\Projects\Ejemplos C#\EnviarCorreo\EnviarCorreo\bin\Debug\EnviarCorreo.exe
+C:\Users\STALIN\Documents\Visual Studio 2010\Projects\Ejemplos C#\EnviarCorreo\EnviarCorreo\bin\Debug\EnviarCorreo.pdb
+C:\Users\STALIN\Documents\Visual Studio 2010\Projects\Ejemplos C#\EnviarCorreo\EnviarCorreo\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\STALIN\Documents\Visual Studio 2010\Projects\Ejemplos C#\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.Form1.resources
+C:\Users\STALIN\Documents\Visual Studio 2010\Projects\Ejemplos C#\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.Properties.Resources.resources
+C:\Users\STALIN\Documents\Visual Studio 2010\Projects\Ejemplos C#\EnviarCorreo\EnviarCorreo\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\STALIN\Documents\Visual Studio 2010\Projects\Ejemplos C#\EnviarCorreo\EnviarCorreo\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\STALIN\Documents\Visual Studio 2010\Projects\Ejemplos C#\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.exe
+C:\Users\STALIN\Documents\Visual Studio 2010\Projects\Ejemplos C#\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.pdb
+C:\Users\Alex\Downloads\EnviarCorreo\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.exe
+C:\Users\Alex\Downloads\EnviarCorreo\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.pdb
+C:\Users\Alex\Downloads\EnviarCorreo\EnviarCorreo\EnviarCorreo\bin\Debug\EnviarCorreo.exe
+C:\Users\Alex\Downloads\EnviarCorreo\EnviarCorreo\EnviarCorreo\bin\Debug\EnviarCorreo.pdb
+C:\Users\Alex\Downloads\EnviarCorreo\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Downloads\EnviarCorreo\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.Form1.resources
+C:\Users\Alex\Downloads\EnviarCorreo\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.Properties.Resources.resources
+C:\Users\Alex\Downloads\EnviarCorreo\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.csproj.GenerateResource.Cache
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EnviarCorreo\EnviarCorreo\EnviarCorreo\bin\Debug\EnviarCorreo.exe
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EnviarCorreo\EnviarCorreo\EnviarCorreo\bin\Debug\EnviarCorreo.pdb
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EnviarCorreo\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.Form1.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EnviarCorreo\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.FormMenu.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EnviarCorreo\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.FormRegistro.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EnviarCorreo\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.Properties.Resources.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EnviarCorreo\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.csproj.GenerateResource.Cache
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EnviarCorreo\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.exe
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EnviarCorreo\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.pdb
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EnviarCorreo\EnviarCorreo\EnviarCorreo\obj\x86\Debug\EnviarCorreo.csprojResolveAssemblyReference.cache
