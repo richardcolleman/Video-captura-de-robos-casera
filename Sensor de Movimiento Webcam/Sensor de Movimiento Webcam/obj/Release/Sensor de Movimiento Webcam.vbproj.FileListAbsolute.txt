@@ -1,4 +1,0 @@
-C:\Users\Jacen\Documents\Visual Studio 2008\Projects\Sensor de Movimiento Webcam\Sensor de Movimiento Webcam\obj\Release\ResolveAssemblyReference.cache
-C:\Users\Jacen\Documents\Visual Studio 2008\Projects\Sensor de Movimiento Webcam\Sensor de Movimiento Webcam\obj\Release\Sensor_de_Movimiento_Webcam.Form1.resources
-C:\Users\Jacen\Documents\Visual Studio 2008\Projects\Sensor de Movimiento Webcam\Sensor de Movimiento Webcam\obj\Release\Sensor_de_Movimiento_Webcam.Resources.resources
-C:\Users\Jacen\Documents\Visual Studio 2008\Projects\Sensor de Movimiento Webcam\Sensor de Movimiento Webcam\obj\Release\Sensor de Movimiento Webcam.vbproj.GenerateResource.Cache
