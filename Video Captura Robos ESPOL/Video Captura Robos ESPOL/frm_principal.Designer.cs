@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_principal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menúToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,6 +62,11 @@
             this.btn_envCorreo = new System.Windows.Forms.Button();
             this.cmb_contenido = new System.Windows.Forms.ComboBox();
             this.pcb_video = new System.Windows.Forms.PictureBox();
+            this.lblDispositivo = new System.Windows.Forms.Label();
+            this.cmb_dispositivos = new System.Windows.Forms.ComboBox();
+            this.lblGrabar = new System.Windows.Forms.Label();
+            this.txt_time = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.grb_contenido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_video)).BeginInit();
@@ -79,7 +85,7 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(634, 24);
             this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Text = "menuPrincipal";
             // 
             // menúToolStripMenuItem
             // 
@@ -108,6 +114,7 @@
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // verToolStripMenuItem
             // 
@@ -260,21 +267,25 @@
             // 
             // btn_iniciar
             // 
+            this.btn_iniciar.Enabled = false;
             this.btn_iniciar.Location = new System.Drawing.Point(267, 321);
             this.btn_iniciar.Name = "btn_iniciar";
             this.btn_iniciar.Size = new System.Drawing.Size(101, 30);
             this.btn_iniciar.TabIndex = 4;
             this.btn_iniciar.Text = "Iniciar Servicio";
             this.btn_iniciar.UseVisualStyleBackColor = true;
+            this.btn_iniciar.Click += new System.EventHandler(this.btn_iniciar_Click);
             // 
             // btn_detener
             // 
+            this.btn_detener.Enabled = false;
             this.btn_detener.Location = new System.Drawing.Point(267, 355);
             this.btn_detener.Name = "btn_detener";
             this.btn_detener.Size = new System.Drawing.Size(101, 30);
             this.btn_detener.TabIndex = 5;
             this.btn_detener.Text = "Detener Servicio";
             this.btn_detener.UseVisualStyleBackColor = true;
+            this.btn_detener.Click += new System.EventHandler(this.btn_detener_Click);
             // 
             // grb_contenido
             // 
@@ -328,12 +339,59 @@
             this.pcb_video.TabIndex = 1;
             this.pcb_video.TabStop = false;
             // 
+            // lblDispositivo
+            // 
+            this.lblDispositivo.AutoSize = true;
+            this.lblDispositivo.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDispositivo.Location = new System.Drawing.Point(15, 398);
+            this.lblDispositivo.Name = "lblDispositivo";
+            this.lblDispositivo.Size = new System.Drawing.Size(136, 18);
+            this.lblDispositivo.TabIndex = 26;
+            this.lblDispositivo.Text = "Dispositivos de Video";
+            // 
+            // cmb_dispositivos
+            // 
+            this.cmb_dispositivos.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_dispositivos.FormattingEnabled = true;
+            this.cmb_dispositivos.Location = new System.Drawing.Point(157, 390);
+            this.cmb_dispositivos.Name = "cmb_dispositivos";
+            this.cmb_dispositivos.Size = new System.Drawing.Size(211, 26);
+            this.cmb_dispositivos.TabIndex = 25;
+            // 
+            // lblGrabar
+            // 
+            this.lblGrabar.AutoSize = true;
+            this.lblGrabar.Location = new System.Drawing.Point(29, 373);
+            this.lblGrabar.Name = "lblGrabar";
+            this.lblGrabar.Size = new System.Drawing.Size(63, 13);
+            this.lblGrabar.TabIndex = 27;
+            this.lblGrabar.Text = "Grabando...";
+            this.lblGrabar.Visible = false;
+            // 
+            // txt_time
+            // 
+            this.txt_time.Location = new System.Drawing.Point(435, 36);
+            this.txt_time.Name = "txt_time";
+            this.txt_time.ReadOnly = true;
+            this.txt_time.Size = new System.Drawing.Size(125, 20);
+            this.txt_time.TabIndex = 28;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 50;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frm_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(634, 397);
+            this.ClientSize = new System.Drawing.Size(634, 425);
+            this.Controls.Add(this.txt_time);
+            this.Controls.Add(this.lblGrabar);
+            this.Controls.Add(this.lblDispositivo);
+            this.Controls.Add(this.cmb_dispositivos);
             this.Controls.Add(this.grb_contenido);
             this.Controls.Add(this.btn_detener);
             this.Controls.Add(this.btn_iniciar);
@@ -389,6 +447,11 @@
         private System.Windows.Forms.ToolStripMenuItem procesosManualesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem envíoDeCorreosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem subirAOneDriveToolStripMenuItem;
+        internal System.Windows.Forms.Label lblDispositivo;
+        private System.Windows.Forms.ComboBox cmb_dispositivos;
+        private System.Windows.Forms.Label lblGrabar;
+        private System.Windows.Forms.TextBox txt_time;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
