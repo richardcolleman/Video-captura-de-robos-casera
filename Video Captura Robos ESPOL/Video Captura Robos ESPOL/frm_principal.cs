@@ -107,11 +107,12 @@ namespace Video_Captura_Robos_ESPOL
                     this.btn_foto.BackColor = Color.Red;
                     if (!IsRecording)
                     {
-                        foto.Save("D:/photo.png", System.Drawing.Imaging.ImageFormat.Png);
+                        //Cambie Ruta a C:\Users\Alex\Documents
+                        foto.Save("C:/Users/Alex/Documents/CapturasSistema/photo.png", System.Drawing.Imaging.ImageFormat.Png);
                         time_stop = DateTime.Now.AddSeconds(10);
                         IsRecording = true;
                         writer = new AVIWriter();
-                        writer.Open("D:/video.avi", (int)Math.Ceiling((double)pcb_video.Image.Width), (int)Math.Ceiling((double)pcb_video.Image.Height));
+                        writer.Open("C:/Users/Alex/Documents/CapturasSistema/video.avi", (int)Math.Ceiling((double)pcb_video.Image.Width), (int)Math.Ceiling((double)pcb_video.Image.Height));
                     }
                     
                 }
@@ -135,7 +136,7 @@ namespace Video_Captura_Robos_ESPOL
              {
                 FuenteDeVideo = new VideoCaptureDevice(Disp_Video[cmb_dispositivos.SelectedIndex].MonikerString);
                 FuenteDeVideo.NewFrame += new NewFrameEventHandler( video_NuevoFrame);
-                 FuenteDeVideo.Start();
+                FuenteDeVideo.Start();
                 cmb_dispositivos.Enabled = false;
                 btn_detener.Enabled = true;
                 btn_iniciar.Enabled = false;
@@ -196,6 +197,23 @@ namespace Video_Captura_Robos_ESPOL
                 }
             }
                 
+        }
+
+        private void subirAOneDriveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainForm frmOnedrive = new MainForm();
+            frmOnedrive.Show();
+        }
+
+        private void capturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VisorPrincipal frmVisorPrincipal = new VisorPrincipal();
+            frmVisorPrincipal.Show();
+        }
+
+        private void btn_envCorreo_Click(object sender, EventArgs e)
+        {
+            
         }
 
     }

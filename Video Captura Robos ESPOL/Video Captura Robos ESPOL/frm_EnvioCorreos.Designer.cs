@@ -79,7 +79,7 @@
             this.rtxt_mensaje.Name = "rtxt_mensaje";
             this.rtxt_mensaje.Size = new System.Drawing.Size(294, 143);
             this.rtxt_mensaje.TabIndex = 7;
-            this.rtxt_mensaje.Text = "";
+            this.rtxt_mensaje.Text = resources.GetString("rtxt_mensaje.Text");
             // 
             // txt_adjunto
             // 

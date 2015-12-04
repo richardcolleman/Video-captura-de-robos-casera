@@ -100,19 +100,19 @@
             // iniciarToolStripMenuItem
             // 
             this.iniciarToolStripMenuItem.Name = "iniciarToolStripMenuItem";
-            this.iniciarToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.iniciarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.iniciarToolStripMenuItem.Text = "Iniciar";
             // 
             // detenerToolStripMenuItem
             // 
             this.detenerToolStripMenuItem.Name = "detenerToolStripMenuItem";
-            this.detenerToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.detenerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.detenerToolStripMenuItem.Text = "Detener";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -128,8 +128,9 @@
             // capturasToolStripMenuItem
             // 
             this.capturasToolStripMenuItem.Name = "capturasToolStripMenuItem";
-            this.capturasToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.capturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.capturasToolStripMenuItem.Text = "Capturas";
+            this.capturasToolStripMenuItem.Click += new System.EventHandler(this.capturasToolStripMenuItem_Click);
             // 
             // historialToolStripMenuItem
             // 
@@ -137,7 +138,7 @@
             this.conexionesToolStripMenuItem,
             this.notificacionesToolStripMenuItem});
             this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
-            this.historialToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.historialToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.historialToolStripMenuItem.Text = "Historial";
             // 
             // conexionesToolStripMenuItem
@@ -164,7 +165,7 @@
             // cámaraToolStripMenuItem
             // 
             this.cámaraToolStripMenuItem.Name = "cámaraToolStripMenuItem";
-            this.cámaraToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.cámaraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cámaraToolStripMenuItem.Text = "Cámara";
             // 
             // usuarioToolStripMenuItem
@@ -174,7 +175,7 @@
             this.correosNotificacionesToolStripMenuItem,
             this.excepcionesToolStripMenuItem});
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.usuarioToolStripMenuItem.Text = "Registro";
             // 
             // usuarioToolStripMenuItem1
@@ -218,6 +219,7 @@
             this.subirAOneDriveToolStripMenuItem.Name = "subirAOneDriveToolStripMenuItem";
             this.subirAOneDriveToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.subirAOneDriveToolStripMenuItem.Text = "Subir a OneDrive";
+            this.subirAOneDriveToolStripMenuItem.Click += new System.EventHandler(this.subirAOneDriveToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -292,9 +294,9 @@
             this.grb_contenido.Controls.Add(this.btn_eliminar);
             this.grb_contenido.Controls.Add(this.btn_envCorreo);
             this.grb_contenido.Controls.Add(this.cmb_contenido);
-            this.grb_contenido.Location = new System.Drawing.Point(383, 87);
+            this.grb_contenido.Location = new System.Drawing.Point(382, 36);
             this.grb_contenido.Name = "grb_contenido";
-            this.grb_contenido.Size = new System.Drawing.Size(240, 297);
+            this.grb_contenido.Size = new System.Drawing.Size(240, 349);
             this.grb_contenido.TabIndex = 6;
             this.grb_contenido.TabStop = false;
             this.grb_contenido.Text = "Contenido";
@@ -302,7 +304,7 @@
             // btn_eliminar
             // 
             this.btn_eliminar.Image = global::Video_Captura_Robos_ESPOL.Properties.Resources.trash1;
-            this.btn_eliminar.Location = new System.Drawing.Point(183, 258);
+            this.btn_eliminar.Location = new System.Drawing.Point(184, 310);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(50, 33);
             this.btn_eliminar.TabIndex = 2;
@@ -311,11 +313,12 @@
             // btn_envCorreo
             // 
             this.btn_envCorreo.Image = global::Video_Captura_Robos_ESPOL.Properties.Resources.email1;
-            this.btn_envCorreo.Location = new System.Drawing.Point(127, 258);
+            this.btn_envCorreo.Location = new System.Drawing.Point(128, 310);
             this.btn_envCorreo.Name = "btn_envCorreo";
             this.btn_envCorreo.Size = new System.Drawing.Size(50, 33);
             this.btn_envCorreo.TabIndex = 1;
             this.btn_envCorreo.UseVisualStyleBackColor = true;
+            this.btn_envCorreo.Click += new System.EventHandler(this.btn_envCorreo_Click);
             // 
             // cmb_contenido
             // 
@@ -342,26 +345,26 @@
             // lblDispositivo
             // 
             this.lblDispositivo.AutoSize = true;
-            this.lblDispositivo.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDispositivo.Location = new System.Drawing.Point(15, 398);
+            this.lblDispositivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDispositivo.Location = new System.Drawing.Point(12, 396);
             this.lblDispositivo.Name = "lblDispositivo";
-            this.lblDispositivo.Size = new System.Drawing.Size(136, 18);
+            this.lblDispositivo.Size = new System.Drawing.Size(111, 13);
             this.lblDispositivo.TabIndex = 26;
-            this.lblDispositivo.Text = "Dispositivos de Video";
+            this.lblDispositivo.Text = "Dispositivos de Video:";
             // 
             // cmb_dispositivos
             // 
-            this.cmb_dispositivos.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_dispositivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_dispositivos.FormattingEnabled = true;
-            this.cmb_dispositivos.Location = new System.Drawing.Point(157, 390);
+            this.cmb_dispositivos.Location = new System.Drawing.Point(140, 393);
             this.cmb_dispositivos.Name = "cmb_dispositivos";
-            this.cmb_dispositivos.Size = new System.Drawing.Size(211, 26);
+            this.cmb_dispositivos.Size = new System.Drawing.Size(228, 21);
             this.cmb_dispositivos.TabIndex = 25;
             // 
             // lblGrabar
             // 
             this.lblGrabar.AutoSize = true;
-            this.lblGrabar.Location = new System.Drawing.Point(29, 373);
+            this.lblGrabar.Location = new System.Drawing.Point(12, 372);
             this.lblGrabar.Name = "lblGrabar";
             this.lblGrabar.Size = new System.Drawing.Size(63, 13);
             this.lblGrabar.TabIndex = 27;
@@ -370,11 +373,12 @@
             // 
             // txt_time
             // 
-            this.txt_time.Location = new System.Drawing.Point(435, 36);
+            this.txt_time.Location = new System.Drawing.Point(497, 393);
             this.txt_time.Name = "txt_time";
             this.txt_time.ReadOnly = true;
             this.txt_time.Size = new System.Drawing.Size(125, 20);
             this.txt_time.TabIndex = 28;
+            this.txt_time.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // timer1
             // 
@@ -387,7 +391,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(634, 425);
+            this.ClientSize = new System.Drawing.Size(634, 447);
             this.Controls.Add(this.txt_time);
             this.Controls.Add(this.lblGrabar);
             this.Controls.Add(this.lblDispositivo);
