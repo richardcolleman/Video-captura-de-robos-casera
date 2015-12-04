@@ -318,7 +318,6 @@
             this.btn_envCorreo.Size = new System.Drawing.Size(50, 33);
             this.btn_envCorreo.TabIndex = 1;
             this.btn_envCorreo.UseVisualStyleBackColor = true;
-            this.btn_envCorreo.Click += new System.EventHandler(this.btn_envCorreo_Click);
             // 
             // cmb_contenido
             // 

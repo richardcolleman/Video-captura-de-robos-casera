@@ -121,3 +121,16 @@ C:\Users\Alex\Documents\Proyecto Trabajando act\Video-captura-de-robos-casera\Vi
 C:\Users\Alex\Documents\Proyecto Trabajando act\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.ImageDialog.resources
 C:\Users\Alex\Documents\Proyecto Trabajando act\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.ImageViewer.resources
 C:\Users\Alex\Documents\Proyecto Trabajando act\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.VisorPrincipal.resources
+C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.ImageDialog.resources
+C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.ImageViewer.resources
+C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.LiveAuthForm.resources
+C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.MainForm.resources
+C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.VisorPrincipal.resources
+C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Video.FFMPEG.dll
+C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Video.FFMPEG.xml
+C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Controls.dll
+C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Imaging.Formats.dll
+C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Controls.xml
+C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Imaging.Formats.xml
+C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Genetic.dll
+C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Genetic.xml

@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Net.Mail;
+using System.Net.Mime;
 using AForge;
 using AForge.Video;
 using AForge.Imaging;
@@ -28,7 +29,8 @@ namespace Video_Captura_Robos_ESPOL
         private Bitmap foto=null;
         private bool IsRecording = false;
         private AVIWriter writer = null;
-        private Timer timer_frames=null;
+        private MailMessage mail;
+        private Attachment Data;
         private DateTime time_stop = DateTime.MinValue;
         //private VideoFileWriter writer = new VideoFileWriter();
         public frm_principal()
@@ -108,11 +110,12 @@ namespace Video_Captura_Robos_ESPOL
                     if (!IsRecording)
                     {
                         //Cambie Ruta a C:\Users\Alex\Documents
-                        foto.Save("C:/Users/Alex/Documents/CapturasSistema/photo.png", System.Drawing.Imaging.ImageFormat.Png);
+                        foto.Save("D:/photo.png", System.Drawing.Imaging.ImageFormat.Png);
                         time_stop = DateTime.Now.AddSeconds(10);
                         IsRecording = true;
-                        writer = new AVIWriter();
-                        writer.Open("C:/Users/Alex/Documents/CapturasSistema/video.avi", (int)Math.Ceiling((double)pcb_video.Image.Width), (int)Math.Ceiling((double)pcb_video.Image.Height));
+                        writer = new AVIWriter("wmv3");
+                        writer.Open("D:/video.avi", (int)Math.Ceiling((double)pcb_video.Image.Width), (int)Math.Ceiling((double)pcb_video.Image.Height));
+                        //writer.Open("D:/video.avi", 640, 480);
                     }
                     
                 }
@@ -170,6 +173,47 @@ namespace Video_Captura_Robos_ESPOL
             }
         }
 
+        private void enviar_Correo(string To,string Subject,string Body)
+        {
+            string[] Mails;
+                /*To = txt_destinatarios.Text.TrimEnd(';');
+                
+                Subject = txt_asunto.Text;
+                Body = rtxt_mensaje.Text;*/
+                Mails = To.Split(';');//varios correos
+                mail = new MailMessage();
+                //varios correos
+                foreach (string lista in Mails)
+                {
+                    mail.To.Add(new MailAddress(lista));
+                }
+                //mail.To.Add(new MailAddress(this.To));
+                mail.From = new MailAddress("sist_segu_2015@hotmail.com");
+                mail.Subject = Subject;
+                mail.Body = Body;
+                mail.IsBodyHtml = true;
+
+
+                Data = new Attachment("D:/photo.png", MediaTypeNames.Application.Octet);
+                    mail.Attachments.Add(Data);
+                
+
+                SmtpClient client = new SmtpClient("smtp.live.com", 587);
+                using (client)
+                {
+                    client.Credentials = new System.Net.NetworkCredential("sist_segu_2015@hotmail.com", "Espol2015");
+                    client.EnableSsl = true;
+                    client.Send(mail);
+                }
+                mail.Dispose();
+                Data.Dispose();
+                client.Dispose();
+                client=null;
+                Data=null;
+                mail=null;
+            
+        }
+
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -178,6 +222,7 @@ namespace Video_Captura_Robos_ESPOL
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateTime time = DateTime.Now;
+            string Body = string.Empty;
             txt_time.Text = time.ToLongTimeString();
             if(IsRecording)
             {
@@ -186,11 +231,14 @@ namespace Video_Captura_Robos_ESPOL
                     lblGrabar.Visible = true;
                     lblGrabar.Text = "Grabando hasta " + time_stop.ToLongTimeString();
                     Bitmap Imagen = (Bitmap)pcb_video.Image;
+                    
                     this.writer.AddFrame(Imagen);
                 }
                 else
                 {
                     writer.Close();
+                    Body = "<a href='mailto:sist_segu_2015@hotmail.com?cc=aledcerv@espol.edu.ec&amp;subject=Ignorar%20Evento&amp;body=Se%20ha%20detectado%20movimiento%20en%20el%20sistema%20de%20seguridad%2C%20pero%20Ud.%20ha%20decidido%20ignorar%20este%20evento.%20El%20sistema%20detendr%C3%A1%20el%20servicio%20por%2030%20Minutos.'>IGNORAR</a>";
+                    enviar_Correo("ricardocoloma@hotmail.com", "ALERTA - Sistema de Seguridad ha detectado movimiento", Body);
                     IsRecording = false;
                     lblGrabar.Visible = false;
                     time_stop = DateTime.MinValue;
@@ -211,10 +259,7 @@ namespace Video_Captura_Robos_ESPOL
             frmVisorPrincipal.Show();
         }
 
-        private void btn_envCorreo_Click(object sender, EventArgs e)
-        {
-            
-        }
+
 
     }
 }
