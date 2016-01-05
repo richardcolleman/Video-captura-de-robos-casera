@@ -67,6 +67,7 @@
             this.lblGrabar = new System.Windows.Forms.Label();
             this.txt_time = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtMensajes = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.grb_contenido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_video)).BeginInit();
@@ -100,19 +101,19 @@
             // iniciarToolStripMenuItem
             // 
             this.iniciarToolStripMenuItem.Name = "iniciarToolStripMenuItem";
-            this.iniciarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.iniciarToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.iniciarToolStripMenuItem.Text = "Iniciar";
             // 
             // detenerToolStripMenuItem
             // 
             this.detenerToolStripMenuItem.Name = "detenerToolStripMenuItem";
-            this.detenerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.detenerToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.detenerToolStripMenuItem.Text = "Detener";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -128,7 +129,7 @@
             // capturasToolStripMenuItem
             // 
             this.capturasToolStripMenuItem.Name = "capturasToolStripMenuItem";
-            this.capturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.capturasToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.capturasToolStripMenuItem.Text = "Capturas";
             this.capturasToolStripMenuItem.Click += new System.EventHandler(this.capturasToolStripMenuItem_Click);
             // 
@@ -138,7 +139,7 @@
             this.conexionesToolStripMenuItem,
             this.notificacionesToolStripMenuItem});
             this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
-            this.historialToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.historialToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.historialToolStripMenuItem.Text = "Historial";
             // 
             // conexionesToolStripMenuItem
@@ -165,7 +166,7 @@
             // cámaraToolStripMenuItem
             // 
             this.cámaraToolStripMenuItem.Name = "cámaraToolStripMenuItem";
-            this.cámaraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cámaraToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.cámaraToolStripMenuItem.Text = "Cámara";
             // 
             // usuarioToolStripMenuItem
@@ -175,7 +176,7 @@
             this.correosNotificacionesToolStripMenuItem,
             this.excepcionesToolStripMenuItem});
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.usuarioToolStripMenuItem.Text = "Registro";
             // 
             // usuarioToolStripMenuItem1
@@ -291,6 +292,7 @@
             // 
             // grb_contenido
             // 
+            this.grb_contenido.Controls.Add(this.txtMensajes);
             this.grb_contenido.Controls.Add(this.btn_eliminar);
             this.grb_contenido.Controls.Add(this.btn_envCorreo);
             this.grb_contenido.Controls.Add(this.cmb_contenido);
@@ -385,6 +387,15 @@
             this.timer1.Interval = 50;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // txtMensajes
+            // 
+            this.txtMensajes.Location = new System.Drawing.Point(6, 63);
+            this.txtMensajes.Multiline = true;
+            this.txtMensajes.Name = "txtMensajes";
+            this.txtMensajes.ReadOnly = true;
+            this.txtMensajes.Size = new System.Drawing.Size(227, 229);
+            this.txtMensajes.TabIndex = 3;
+            // 
             // frm_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,6 +421,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.grb_contenido.ResumeLayout(false);
+            this.grb_contenido.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_video)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -455,6 +467,7 @@
         private System.Windows.Forms.Label lblGrabar;
         private System.Windows.Forms.TextBox txt_time;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox txtMensajes;
     }
 }
 

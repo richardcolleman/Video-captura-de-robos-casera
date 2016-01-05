@@ -134,3 +134,56 @@ C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura 
 C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Imaging.Formats.xml
 C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Genetic.dll
 C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Genetic.xml
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Controls.dll
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Genetic.dll
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Imaging.Formats.dll
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Video.FFMPEG.dll
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Controls.xml
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Genetic.xml
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Imaging.Formats.xml
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Video.FFMPEG.xml
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.ImageDialog.resources
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.ImageViewer.resources
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.LiveAuthForm.resources
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.MainForm.resources
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.VisorPrincipal.resources
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\Video Captura Robos ESPOL.exe.config
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video Captura Robos ESPOL.exe
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video Captura Robos ESPOL.pdb
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\Video Captura Robos ESPOL.exe
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\Video Captura Robos ESPOL.pdb
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Controls.dll
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.dll
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Genetic.dll
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Imaging.dll
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Imaging.Formats.dll
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Math.dll
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Video.dll
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Video.FFMPEG.dll
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\aforge.video.vfw.dll
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Vision.dll
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.xml
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Controls.xml
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Genetic.xml
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Imaging.xml
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Imaging.Formats.xml
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Math.xml
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Video.xml
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Video.FFMPEG.xml
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\aforge.video.vfw.xml
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\AForge.Vision.xml
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video Captura Robos ESPOL.csprojResolveAssemblyReference.cache
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.frm_EnvioCorreos.resources
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.frm_principal.resources
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.frm_registroCorreosNotif.resources
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.frm_registroCtasUsuario.resources
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.ImageDialog.resources
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.ImageViewer.resources
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.LiveAuthForm.resources
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.MainForm.resources
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.Properties.Resources.resources
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.VisorPrincipal.resources
+C:\Users\Dylan-Ian\Desktop\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video Captura Robos ESPOL.csproj.GenerateResource.Cache
+C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\NReco.VideoConverter.dll
