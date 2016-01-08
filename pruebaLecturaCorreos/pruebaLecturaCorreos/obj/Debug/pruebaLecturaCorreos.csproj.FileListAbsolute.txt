@@ -1,0 +1,9 @@
+c:\users\alex\documents\visual studio 2013\Projects\pruebaLecturaCorreos\pruebaLecturaCorreos\bin\Debug\pruebaLecturaCorreos.exe.config
+c:\users\alex\documents\visual studio 2013\Projects\pruebaLecturaCorreos\pruebaLecturaCorreos\obj\Debug\pruebaLecturaCorreos.csprojResolveAssemblyReference.cache
+c:\users\alex\documents\visual studio 2013\Projects\pruebaLecturaCorreos\pruebaLecturaCorreos\bin\Debug\pruebaLecturaCorreos.exe
+c:\users\alex\documents\visual studio 2013\Projects\pruebaLecturaCorreos\pruebaLecturaCorreos\bin\Debug\pruebaLecturaCorreos.pdb
+c:\users\alex\documents\visual studio 2013\Projects\pruebaLecturaCorreos\pruebaLecturaCorreos\bin\Debug\OpenPop.dll
+c:\users\alex\documents\visual studio 2013\Projects\pruebaLecturaCorreos\pruebaLecturaCorreos\bin\Debug\OpenPopExamples.dll
+c:\users\alex\documents\visual studio 2013\Projects\pruebaLecturaCorreos\pruebaLecturaCorreos\bin\Debug\OpenPopExamples.pdb
+c:\users\alex\documents\visual studio 2013\Projects\pruebaLecturaCorreos\pruebaLecturaCorreos\obj\Debug\pruebaLecturaCorreos.exe
+c:\users\alex\documents\visual studio 2013\Projects\pruebaLecturaCorreos\pruebaLecturaCorreos\obj\Debug\pruebaLecturaCorreos.pdb
