@@ -53,21 +53,20 @@
             this.manualDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.licenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acerdaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_foto = new System.Windows.Forms.Button();
-            this.btn_grabar = new System.Windows.Forms.Button();
             this.btn_iniciar = new System.Windows.Forms.Button();
             this.btn_detener = new System.Windows.Forms.Button();
             this.grb_contenido = new System.Windows.Forms.GroupBox();
+            this.txtMensajes = new System.Windows.Forms.TextBox();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_envCorreo = new System.Windows.Forms.Button();
-            this.cmb_contenido = new System.Windows.Forms.ComboBox();
-            this.pcb_video = new System.Windows.Forms.PictureBox();
             this.lblDispositivo = new System.Windows.Forms.Label();
             this.cmb_dispositivos = new System.Windows.Forms.ComboBox();
             this.lblGrabar = new System.Windows.Forms.Label();
             this.txt_time = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtMensajes = new System.Windows.Forms.TextBox();
+            this.pcb_video = new System.Windows.Forms.PictureBox();
+            this.lblServicio = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.grb_contenido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_video)).BeginInit();
@@ -250,24 +249,6 @@
             this.acerdaDeToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.acerdaDeToolStripMenuItem.Text = "Acerda de...";
             // 
-            // btn_foto
-            // 
-            this.btn_foto.Location = new System.Drawing.Point(14, 321);
-            this.btn_foto.Name = "btn_foto";
-            this.btn_foto.Size = new System.Drawing.Size(101, 30);
-            this.btn_foto.TabIndex = 2;
-            this.btn_foto.Text = "Instantánea";
-            this.btn_foto.UseVisualStyleBackColor = true;
-            // 
-            // btn_grabar
-            // 
-            this.btn_grabar.Location = new System.Drawing.Point(140, 321);
-            this.btn_grabar.Name = "btn_grabar";
-            this.btn_grabar.Size = new System.Drawing.Size(101, 30);
-            this.btn_grabar.TabIndex = 3;
-            this.btn_grabar.Text = "Grabar";
-            this.btn_grabar.UseVisualStyleBackColor = true;
-            // 
             // btn_iniciar
             // 
             this.btn_iniciar.Enabled = false;
@@ -295,13 +276,21 @@
             this.grb_contenido.Controls.Add(this.txtMensajes);
             this.grb_contenido.Controls.Add(this.btn_eliminar);
             this.grb_contenido.Controls.Add(this.btn_envCorreo);
-            this.grb_contenido.Controls.Add(this.cmb_contenido);
             this.grb_contenido.Location = new System.Drawing.Point(382, 36);
             this.grb_contenido.Name = "grb_contenido";
             this.grb_contenido.Size = new System.Drawing.Size(240, 349);
             this.grb_contenido.TabIndex = 6;
             this.grb_contenido.TabStop = false;
-            this.grb_contenido.Text = "Contenido";
+            this.grb_contenido.Text = "Log";
+            // 
+            // txtMensajes
+            // 
+            this.txtMensajes.Location = new System.Drawing.Point(6, 19);
+            this.txtMensajes.Multiline = true;
+            this.txtMensajes.Name = "txtMensajes";
+            this.txtMensajes.ReadOnly = true;
+            this.txtMensajes.Size = new System.Drawing.Size(227, 273);
+            this.txtMensajes.TabIndex = 3;
             // 
             // btn_eliminar
             // 
@@ -320,28 +309,6 @@
             this.btn_envCorreo.Size = new System.Drawing.Size(50, 33);
             this.btn_envCorreo.TabIndex = 1;
             this.btn_envCorreo.UseVisualStyleBackColor = true;
-            // 
-            // cmb_contenido
-            // 
-            this.cmb_contenido.FormattingEnabled = true;
-            this.cmb_contenido.Items.AddRange(new object[] {
-            "Todo el contenido capturado",
-            "Vídeos Capturados",
-            "Fotos Capturadas"});
-            this.cmb_contenido.Location = new System.Drawing.Point(6, 19);
-            this.cmb_contenido.Name = "cmb_contenido";
-            this.cmb_contenido.Size = new System.Drawing.Size(227, 21);
-            this.cmb_contenido.TabIndex = 0;
-            // 
-            // pcb_video
-            // 
-            this.pcb_video.Image = global::Video_Captura_Robos_ESPOL.Properties.Resources.offline;
-            this.pcb_video.Location = new System.Drawing.Point(14, 36);
-            this.pcb_video.Name = "pcb_video";
-            this.pcb_video.Size = new System.Drawing.Size(354, 275);
-            this.pcb_video.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcb_video.TabIndex = 1;
-            this.pcb_video.TabStop = false;
             // 
             // lblDispositivo
             // 
@@ -387,14 +354,31 @@
             this.timer1.Interval = 50;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // txtMensajes
+            // pcb_video
             // 
-            this.txtMensajes.Location = new System.Drawing.Point(6, 63);
-            this.txtMensajes.Multiline = true;
-            this.txtMensajes.Name = "txtMensajes";
-            this.txtMensajes.ReadOnly = true;
-            this.txtMensajes.Size = new System.Drawing.Size(227, 229);
-            this.txtMensajes.TabIndex = 3;
+            this.pcb_video.Image = global::Video_Captura_Robos_ESPOL.Properties.Resources.offline;
+            this.pcb_video.InitialImage = global::Video_Captura_Robos_ESPOL.Properties.Resources.offline;
+            this.pcb_video.Location = new System.Drawing.Point(14, 36);
+            this.pcb_video.Name = "pcb_video";
+            this.pcb_video.Size = new System.Drawing.Size(354, 279);
+            this.pcb_video.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcb_video.TabIndex = 1;
+            this.pcb_video.TabStop = false;
+            // 
+            // lblServicio
+            // 
+            this.lblServicio.AutoSize = true;
+            this.lblServicio.Location = new System.Drawing.Point(12, 338);
+            this.lblServicio.Name = "lblServicio";
+            this.lblServicio.Size = new System.Drawing.Size(118, 13);
+            this.lblServicio.TabIndex = 29;
+            this.lblServicio.Text = "El servicio iniciará en ...";
+            this.lblServicio.Visible = false;
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // frm_principal
             // 
@@ -402,6 +386,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(634, 447);
+            this.Controls.Add(this.lblServicio);
             this.Controls.Add(this.txt_time);
             this.Controls.Add(this.lblGrabar);
             this.Controls.Add(this.lblDispositivo);
@@ -409,8 +394,6 @@
             this.Controls.Add(this.grb_contenido);
             this.Controls.Add(this.btn_detener);
             this.Controls.Add(this.btn_iniciar);
-            this.Controls.Add(this.btn_grabar);
-            this.Controls.Add(this.btn_foto);
             this.Controls.Add(this.pcb_video);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -451,12 +434,9 @@
         private System.Windows.Forms.ToolStripMenuItem licenciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acerdaDeToolStripMenuItem;
         private System.Windows.Forms.PictureBox pcb_video;
-        private System.Windows.Forms.Button btn_foto;
-        private System.Windows.Forms.Button btn_grabar;
         private System.Windows.Forms.Button btn_iniciar;
         private System.Windows.Forms.Button btn_detener;
         private System.Windows.Forms.GroupBox grb_contenido;
-        private System.Windows.Forms.ComboBox cmb_contenido;
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Button btn_envCorreo;
         private System.Windows.Forms.ToolStripMenuItem procesosManualesToolStripMenuItem;
@@ -468,6 +448,8 @@
         private System.Windows.Forms.TextBox txt_time;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TextBox txtMensajes;
+        private System.Windows.Forms.Label lblServicio;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 

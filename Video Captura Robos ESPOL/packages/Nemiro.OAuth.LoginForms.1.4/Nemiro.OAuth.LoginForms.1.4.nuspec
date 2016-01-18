@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Nemiro.OAuth.LoginForms</id>
+    <version>1.4</version>
+    <authors>Aleksey Nemiro</authors>
+    <owners>Aleksey Nemiro</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.txt</licenseUrl>
+    <projectUrl>https://github.com/alekseynemiro/Nemiro.OAuth.LoginForms</projectUrl>
+    <iconUrl>http://content.nemiro.net/images/Nemiro.OAuth.LoginForms.128.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>The class library contains ready-to-use OAuth authorization forms for Windows Forms (.NET Framework).
+
+It is an independent part of the Nemiro.OAuth project.</description>
+    <summary>The class library with ready-to-use OAuth authorization forms for Windows Forms (.NET Framework).</summary>
+    <releaseNotes>December 7, 2015
+
+* Fixed form for DropBox;
+* Implemented logout.</releaseNotes>
+    <copyright>(c) Aleksey Nemiro, 2015</copyright>
+    <language>en-US</language>
+    <tags>OAuth VB.NET C# WinForms Windows Forms</tags>
+    <dependencies>
+      <dependency id="Nemiro.OAuth" version="1.10" />
+    </dependencies>
+  </metadata>
+</package>

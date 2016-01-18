@@ -62,10 +62,6 @@
       <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="AForge.Video.FFMPEG, Version=2.2.5.0, Culture=neutral, PublicKeyToken=03563089b1be05dd, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Video.FFMPEG.dll</HintPath>
-    </Reference>
     <Reference Include="aforge.video.vfw, Version=2.1.3.0, Culture=neutral, PublicKeyToken=a82f807c999637c8, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Downloads\aforge.video.vfw.dll</HintPath>
@@ -77,6 +73,12 @@
     <Reference Include="Microsoft.Live, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SDKs\Live\v5.6\.Net\Bin\Microsoft.Live.dll</HintPath>
+    </Reference>
+    <Reference Include="Nemiro.OAuth">
+      <HintPath>..\packages\Nemiro.OAuth.1.10\lib\net45\Nemiro.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Nemiro.OAuth.LoginForms">
+      <HintPath>..\packages\Nemiro.OAuth.LoginForms.1.4\lib\net45\Nemiro.OAuth.LoginForms.dll</HintPath>
     </Reference>
     <Reference Include="NReco.VideoConverter">
       <HintPath>..\..\libs\NReco.VideoConverter.dll</HintPath>

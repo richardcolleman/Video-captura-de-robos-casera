@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Nemiro.OAuth</id>
+    <version>1.10</version>
+    <authors>Aleksey Nemiro</authors>
+    <owners>Aleksey Nemiro</owners>
+    <licenseUrl>http://oauth.nemiro.net/?topic=license.html</licenseUrl>
+    <projectUrl>http://oauth.nemiro.net/</projectUrl>
+    <iconUrl>http://oauth.nemiro.net/oauth.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Nemiro.OAuth is a class library for authorization via OAuth protocol in .NET Framework.
+
+The library provides mechanisms for implementing OAuth clients, and also contains a ready-to-use clients for popular websites.
+
+Nemiro.OAuth is licensed under the Apache License Version 2.0.
+
+Features
+
+* Support OAuth 1.0 and 2.0;
+* Obtaining basic information about users: ID, name, sex, date of birth, email address and telephone number;
+* Ready-to-Use OAuth clients for: Amazon, Assembla, CodeProject, Dropbox, Facebook, Foursquare, GitHub, Google, Instagram, LinkedIn, Microsoft Live, Mail.Ru, Odnoklassniki, SoundCloud, SourceForge, Tumblr, Twitter, VKontakte, Yahoo! and Yandex;
+* Base classes to create additional clients;
+* Basic principles of operation with API of different providers;
+* Unified mechanisms to facilitate integration with a variety of API. 
+
+Less code, more functionality!
+
+Demo: http://demo-oauth.nemiro.net/</description>
+    <summary>The class library for authorization via OAuth protocol in .NET Framework. The library provides mechanisms for implementing OAuth clients, and also contains a ready-to-use clients for popular websites.</summary>
+    <releaseNotes>June 21, 2015
+
+This version includes fixes for .NET 3.5 and common enhancements.
+
+* Fixed bug in the WriteToRequestStream for .NET Framework 3.5;
+* Fixed error: "Inheritance security rules violated while overriding member: UniValue.GetObjectData...". An error was detected in projects .NET Framework 3.5;
+* Fixed client for LinkedIn (updated default scope);
+* Added the ability to use any multipart requests (not only multipart/form-data);
+* Removed the obsolete overload of the GetUserInfo.
+
+For details, please see:
+https://github.com/alekseynemiro/nemiro.oauth.dll/blob/master/Release%20Notes.md</releaseNotes>
+    <copyright>(c) Aleksey Nemiro, 2014-2015</copyright>
+    <language>en-US</language>
+    <tags>OAuth VB.NET C# WebForms MVC ASP.NET WinForms Windows</tags>
+  </metadata>
+</package>

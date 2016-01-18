@@ -15,8 +15,9 @@ using AForge.Imaging;
 using AForge.Video.VFW;
 using AForge.Vision.Motion;
 using AForge.Video.DirectShow;
-//using AForge.Video.FFMPEG;
 using NReco.VideoConverter;
+using Nemiro.OAuth;
+using Nemiro.OAuth.LoginForms;
 
 namespace Video_Captura_Robos_ESPOL
 {
@@ -33,16 +34,14 @@ namespace Video_Captura_Robos_ESPOL
         private MailMessage mail;
         private Attachment Data;
         private DateTime time_stop = DateTime.MinValue;
-        //private VideoFileWriter FileWriter = new VideoFileWriter();
+        int timeLeft;
+        string PhotoFileName = string.Empty;
+        string VideoFileName = string.Empty;
         public frm_principal()
         {
             InitializeComponent();
         }
 
-        private void btn_foto_MouseEnter(object sender, EventArgs e)
-        {
-            btn_foto.BackColor = Color.LightBlue;
-        }
 
         private void Carga_Dispositivos()
         {
@@ -69,7 +68,6 @@ namespace Video_Captura_Robos_ESPOL
         private void frm_principal_Load(object sender, EventArgs e)
         {
             Busca_Dispositivos();
-            cmb_contenido.SelectedIndex = 0;
             cmb_dispositivos.SelectedIndex = 1;
             timer1.Start();
         }
@@ -106,22 +104,19 @@ namespace Video_Captura_Robos_ESPOL
                 if(motionLevel > motionAlarmLevel)
                 {
                     //"Si hay Movimiento";
-                    this.btn_foto.ForeColor = Color.White;
-                    this.btn_foto.BackColor = Color.Red;
-                    if (!IsRecording)
+                    if (!IsRecording && timeLeft<=0)
                     {
                         
                         time_stop = DateTime.Now.AddSeconds(10);
                         IsRecording = true;
-                        writer.Open("D:/video.avi", (int)Math.Ceiling((double)pcb_video.Image.Width), (int)Math.Ceiling((double)pcb_video.Image.Height));
-                        //FileWriter.Open("D:/video.avi", 640, 480, 25, VideoCodec.MPEG4, 5000000);
+                        VideoFileName = "D:/video_" + DateTime.Now.ToShortDateString().Replace("/", "-") + DateTime.Now.ToShortTimeString().Replace(":", "_") + ".avi";
+                        writer.Open(VideoFileName, video.Width, video.Height);
+                        //FileWriter.Open("D:/video.avi", 320, 240, 25, VideoCodec.MPEG4, 5000000);
                     }
                     
                 }
                 else{
                     //"No hay Movimiento";
-                    this.btn_foto.ForeColor = Color.Black;
-                    this.btn_foto.BackColor = Color.Yellow;
                     foto = (Bitmap)eventArgs.Frame.Clone();
                 }
 
@@ -131,9 +126,33 @@ namespace Video_Captura_Robos_ESPOL
            }
         }
 
+        private void GetAccesToken()
+        {
+            var login = new DropboxLogin("967so10b2m8tutu", "knm65ro9x474cdq");
+            login.Owner = this;
+            login.ShowDialog();
+
+            if (login.IsSuccessfully)
+            {
+                Properties.Settings.Default.AccessToken = login.AccessToken.Value;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                MessageBox.Show("error...");
+            }
+        }
         private void btn_iniciar_Click(object sender, EventArgs e)
         {
-          
+            /*if (String.IsNullOrEmpty(Properties.Settings.Default.AccessToken))
+                this.GetAccesToken();//*/
+
+            // Start the timer.
+            timeLeft = 30;
+            lblServicio.Visible = true;
+            lblServicio.Text = "El servicio iniciará en ... 30 segundos";
+            timer2.Start();
+
              if(Dispositivos_Disponibles)
              {
                 FuenteDeVideo = new VideoCaptureDevice(Disp_Video[cmb_dispositivos.SelectedIndex].MonikerString);
@@ -165,9 +184,13 @@ namespace Video_Captura_Robos_ESPOL
             if (FuenteDeVideo.IsRunning)
             {
                 Termina_FuenteDeVideo();
+                writer.Close();
+                pcb_video.Image=Properties.Resources.offline;
+                timer1.Stop();
+                timer2.Stop();
+                lblServicio.Text = "";
                 cmb_dispositivos.Enabled = true;
                 btn_detener.Enabled = false;
-                //pcb_video.Image=null;
                 btn_iniciar.Enabled = true;
             }
         }
@@ -193,7 +216,7 @@ namespace Video_Captura_Robos_ESPOL
                 mail.IsBodyHtml = true;
 
 
-                Data = new Attachment("D:/photo.png", MediaTypeNames.Application.Octet);
+                Data = new Attachment(PhotoFileName, MediaTypeNames.Application.Octet);
                     mail.Attachments.Add(Data);
                 
 
@@ -248,19 +271,23 @@ namespace Video_Captura_Robos_ESPOL
                     writer.AddFrame(video);
                     //FileWriter.WriteVideoFrame(video);
                     if(time<time_stop.AddSeconds(-8))
-                        foto.Save("D:/photo.png", System.Drawing.Imaging.ImageFormat.Png);
+                    {
+                        PhotoFileName = "D:/photo_" + DateTime.Now.ToShortDateString().Replace("/", "-") + DateTime.Now.ToShortTimeString().Replace(":","_") + ".png";
+                        foto.Save(PhotoFileName, System.Drawing.Imaging.ImageFormat.Png);
+                    }
                 }
                 else
                 {
                     writer.Close();
 
                     //FileWriter.Close();
+                    ffMpeg.ConvertMedia(VideoFileName, VideoFileName.Replace(".avi",".mp4"), Format.mp4);
                     Body = "<a href='mailto:sist_segu_2015@hotmail.com?cc=aledcerv@espol.edu.ec&amp;subject=Ignorar%20Evento&amp;body=Se%20ha%20detectado%20movimiento%20en%20el%20sistema%20de%20seguridad%2C%20pero%20Ud.%20ha%20decidido%20ignorar%20este%20evento.%20El%20sistema%20detendr%C3%A1%20el%20servicio%20por%2030%20Minutos.'>IGNORAR</a>";
                     enviar_Correo("ricardocoloma@hotmail.com", "ALERTA - Sistema de Seguridad ha detectado movimiento", Body);
                     IsRecording = false;
                     lblGrabar.Visible = false;
                     time_stop = DateTime.MinValue;
-                    ffMpeg.ConvertMedia("D:/video.avi","D:/video.mp4", Format.mp4);
+                    
                 }
             }
                 
@@ -276,6 +303,21 @@ namespace Video_Captura_Robos_ESPOL
         {
             VisorPrincipal frmVisorPrincipal = new VisorPrincipal();
             frmVisorPrincipal.Show();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (timeLeft > 0)
+            {
+                timeLeft = timeLeft - 1;
+                lblServicio.Text = "El servicio iniciará en ..." + timeLeft.ToString() + " seconds";
+            }
+            else
+            {
+                timer2.Stop();
+                lblServicio.Text = "";
+                
+            }
         }
 
 
