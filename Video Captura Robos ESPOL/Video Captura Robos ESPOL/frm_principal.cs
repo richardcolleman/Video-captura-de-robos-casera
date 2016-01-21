@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Mail;
 using System.Net.Mime;
+using System.IO;
+using System.Net;
 using AForge;
 using AForge.Video;
 using AForge.Imaging;
@@ -37,6 +39,7 @@ namespace Video_Captura_Robos_ESPOL
         int timeLeft;
         string PhotoFileName = string.Empty;
         string VideoFileName = string.Empty;
+        string UploadFileName = string.Empty;
         public frm_principal()
         {
             InitializeComponent();
@@ -144,7 +147,7 @@ namespace Video_Captura_Robos_ESPOL
         }
         private void btn_iniciar_Click(object sender, EventArgs e)
         {
-            /*if (String.IsNullOrEmpty(Properties.Settings.Default.AccessToken))
+            if (String.IsNullOrEmpty(Properties.Settings.Default.AccessToken))
                 this.GetAccesToken();//*/
 
             // Start the timer.
@@ -186,9 +189,10 @@ namespace Video_Captura_Robos_ESPOL
                 Termina_FuenteDeVideo();
                 writer.Close();
                 pcb_video.Image=Properties.Resources.offline;
-                timer1.Stop();
+                //timer1.Stop();
                 timer2.Stop();
                 lblServicio.Text = "";
+                lblGrabar.Text = "";
                 cmb_dispositivos.Enabled = true;
                 btn_detener.Enabled = false;
                 btn_iniciar.Enabled = true;
@@ -254,6 +258,48 @@ namespace Video_Captura_Robos_ESPOL
             Application.Exit();
         }
 
+        private void Upload_Result(RequestResult result)
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action<RequestResult>(Upload_Result), result);
+                return;
+            }
+
+            if (result.StatusCode == 200)
+            {
+                this.txtMensajes.Text="\nCarga de archivo exitosa";
+            }
+            else
+            {
+                if (result["error"].HasValue)
+                {
+                    this.txtMensajes.Text="\n" + result["error"].ToString();
+                }
+                else
+                {
+                    this.txtMensajes.Text="\n" + result.ToString();
+                }
+            }
+        }
+        private void subirArchivo( string ruta)
+        {
+            Stream archivo = (Stream)File.OpenRead(ruta);
+            UploadFileName="/Public/video_" + DateTime.Now.ToShortDateString().Replace("/", "-") + DateTime.Now.ToShortTimeString().Replace(":", "_") + ".mp4";
+            OAuthUtility.PutAsync
+              (
+                "https://api-content.dropbox.com/1/files_put/auto/",
+                new HttpParameterCollection
+                {
+                  {"access_token", Properties.Settings.Default.AccessToken},
+                  {"path", UploadFileName},
+                  {"overwrite", "true"},
+                  {"autorename","true"},
+                  {archivo}
+                },
+                callback: Upload_Result
+              );
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateTime time = DateTime.Now;
@@ -282,6 +328,7 @@ namespace Video_Captura_Robos_ESPOL
 
                     //FileWriter.Close();
                     ffMpeg.ConvertMedia(VideoFileName, VideoFileName.Replace(".avi",".mp4"), Format.mp4);
+                    subirArchivo(VideoFileName.Replace(".avi", ".mp4"));
                     Body = "<a href='mailto:sist_segu_2015@hotmail.com?cc=aledcerv@espol.edu.ec&amp;subject=Ignorar%20Evento&amp;body=Se%20ha%20detectado%20movimiento%20en%20el%20sistema%20de%20seguridad%2C%20pero%20Ud.%20ha%20decidido%20ignorar%20este%20evento.%20El%20sistema%20detendr%C3%A1%20el%20servicio%20por%2030%20Minutos.'>IGNORAR</a>";
                     enviar_Correo("ricardocoloma@hotmail.com", "ALERTA - Sistema de Seguridad ha detectado movimiento", Body);
                     IsRecording = false;

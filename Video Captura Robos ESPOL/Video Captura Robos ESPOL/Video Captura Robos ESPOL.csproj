@@ -74,6 +74,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SDKs\Live\v5.6\.Net\Bin\Microsoft.Live.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Nemiro.OAuth">
       <HintPath>..\packages\Nemiro.OAuth.1.10\lib\net45\Nemiro.OAuth.dll</HintPath>
     </Reference>
@@ -85,6 +86,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -251,7 +253,11 @@
     <Content Include="Scripts\typings\winjs\winjs-2.0.d.ts" />
     <Content Include="Scripts\typings\winjs\winjs-2.1.d.ts" />
     <Content Include="Scripts\typings\winjs\winjs.d.ts" />
+    <Content Include="Scripts\typings\winrt\winrt-uwp.d.ts" />
     <Content Include="Scripts\typings\winrt\winrt.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fakes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
