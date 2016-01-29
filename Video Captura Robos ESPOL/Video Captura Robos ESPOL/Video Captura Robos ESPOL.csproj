@@ -248,6 +248,23 @@
     <None Include="Resources\correos.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\fondo_principal.png" />
+    <None Include="Resources\form_rec.png" />
+    <None Include="Resources\form_stop.png" />
+    <None Include="Resources\menu_inicio.png" />
+    <None Include="Resources\menu_fin.png" />
+    <None Include="Resources\menu_salir.png" />
+    <None Include="Resources\menu_capturas.png" />
+    <None Include="Resources\menu_log.png" />
+    <None Include="Resources\menu_login.png" />
+    <None Include="Resources\menu_alertas.png" />
+    <None Include="Resources\menu_camara.png" />
+    <None Include="Resources\reg.png" />
+    <None Include="Resources\nube.png" />
+    <None Include="Resources\correos2.png" />
+    <None Include="Resources\menu_excep.png" />
+    <None Include="Resources\menu_manual.png" />
+    <None Include="Resources\menu_info.png" />
     <Content Include="Scripts\typings\microsoft-live-connect\microsoft-live-connect.d.ts" />
     <Content Include="Scripts\typings\winjs\winjs-1.0.d.ts" />
     <Content Include="Scripts\typings\winjs\winjs-2.0.d.ts" />
