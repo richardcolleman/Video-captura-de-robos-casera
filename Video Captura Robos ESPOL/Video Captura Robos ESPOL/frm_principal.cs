@@ -32,7 +32,8 @@ namespace Video_Captura_Robos_ESPOL
         private Single motionAlarmLevel = 0.015F;
         private Bitmap foto=null,video=null;
         private bool IsRecording = false;
-        private AVIWriter writer = new AVIWriter("wmv3");
+        //private AVIWriter writer = new AVIWriter("wmv3");
+        private AVIWriter writer = new AVIWriter();
         private MailMessage mail;
         private Attachment Data;
         private DateTime time_stop = DateTime.MinValue;
@@ -112,7 +113,7 @@ namespace Video_Captura_Robos_ESPOL
                         
                         time_stop = DateTime.Now.AddSeconds(10);
                         IsRecording = true;
-                        VideoFileName = "D:/video_" + DateTime.Now.ToShortDateString().Replace("/", "-") + DateTime.Now.ToShortTimeString().Replace(":", "_") + ".avi";
+                        VideoFileName = "C:/Users/Alex/Documents/video_" + DateTime.Now.ToShortDateString().Replace("/", "-") + DateTime.Now.ToShortTimeString().Replace(":", "_") + ".avi";
                         writer.Open(VideoFileName, video.Width, video.Height);
                         //FileWriter.Open("D:/video.avi", 320, 240, 25, VideoCodec.MPEG4, 5000000);
                     }
@@ -142,7 +143,7 @@ namespace Video_Captura_Robos_ESPOL
             }
             else
             {
-                MessageBox.Show("error...");
+                MessageBox.Show("No se obtuvo acceso a su cuenta Dropbox, favor verificar antes de iniciar el servicio");
             }
         }
         private void btn_iniciar_Click(object sender, EventArgs e)
@@ -318,7 +319,7 @@ namespace Video_Captura_Robos_ESPOL
                     //FileWriter.WriteVideoFrame(video);
                     if(time<time_stop.AddSeconds(-8))
                     {
-                        PhotoFileName = "D:/photo_" + DateTime.Now.ToShortDateString().Replace("/", "-") + DateTime.Now.ToShortTimeString().Replace(":","_") + ".png";
+                        PhotoFileName = "C:/Users/Alex/Documents/photo_" + DateTime.Now.ToShortDateString().Replace("/", "-") + DateTime.Now.ToShortTimeString().Replace(":", "_") + ".png";
                         foto.Save(PhotoFileName, System.Drawing.Imaging.ImageFormat.Png);
                     }
                 }
@@ -367,7 +368,25 @@ namespace Video_Captura_Robos_ESPOL
             }
         }
 
+        private void excepcionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void manualDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Estamos trabajando en el Manual de Usuario, Gracias por su comprensión", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void acerdaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Este es un sistema creado por Alex Cervantes y Ricardo Coloma, Estudiantes de la Facultad de Ingeniería Eléctrica y Computación - Escuela Superior Politécnica del Litoral", "Acerca de...", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void cámaraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_config frmconfig = new frm_config();
+            frmconfig.Show();
+        }
     }
 }

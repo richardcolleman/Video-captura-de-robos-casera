@@ -81,7 +81,7 @@
             this.procesosManualesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(640, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(639, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuPrincipal";
             // 
@@ -99,21 +99,21 @@
             // 
             this.iniciarToolStripMenuItem.Image = global::Video_Captura_Robos_ESPOL.Properties.Resources.menu_inicio;
             this.iniciarToolStripMenuItem.Name = "iniciarToolStripMenuItem";
-            this.iniciarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.iniciarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.iniciarToolStripMenuItem.Text = "Iniciar";
             // 
             // detenerToolStripMenuItem
             // 
             this.detenerToolStripMenuItem.Image = global::Video_Captura_Robos_ESPOL.Properties.Resources.menu_fin;
             this.detenerToolStripMenuItem.Name = "detenerToolStripMenuItem";
-            this.detenerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.detenerToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.detenerToolStripMenuItem.Text = "Detener";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Image = global::Video_Captura_Robos_ESPOL.Properties.Resources.menu_salir;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -130,7 +130,7 @@
             // 
             this.capturasToolStripMenuItem.Image = global::Video_Captura_Robos_ESPOL.Properties.Resources.menu_capturas;
             this.capturasToolStripMenuItem.Name = "capturasToolStripMenuItem";
-            this.capturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.capturasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.capturasToolStripMenuItem.Text = "Capturas";
             this.capturasToolStripMenuItem.Click += new System.EventHandler(this.capturasToolStripMenuItem_Click);
             // 
@@ -141,7 +141,7 @@
             this.notificacionesToolStripMenuItem});
             this.historialToolStripMenuItem.Image = global::Video_Captura_Robos_ESPOL.Properties.Resources.menu_log;
             this.historialToolStripMenuItem.Name = "historialToolStripMenuItem";
-            this.historialToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.historialToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.historialToolStripMenuItem.Text = "Historial";
             // 
             // conexionesToolStripMenuItem
@@ -173,6 +173,7 @@
             this.cámaraToolStripMenuItem.Name = "cámaraToolStripMenuItem";
             this.cámaraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cámaraToolStripMenuItem.Text = "Cámara";
+            this.cámaraToolStripMenuItem.Click += new System.EventHandler(this.cámaraToolStripMenuItem_Click);
             // 
             // usuarioToolStripMenuItem
             // 
@@ -207,6 +208,7 @@
             this.excepcionesToolStripMenuItem.Name = "excepcionesToolStripMenuItem";
             this.excepcionesToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
             this.excepcionesToolStripMenuItem.Text = "Excepciones";
+            this.excepcionesToolStripMenuItem.Click += new System.EventHandler(this.excepcionesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -223,6 +225,7 @@
             this.manualDeUsuarioToolStripMenuItem.Name = "manualDeUsuarioToolStripMenuItem";
             this.manualDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.manualDeUsuarioToolStripMenuItem.Text = "Manual de Usuario";
+            this.manualDeUsuarioToolStripMenuItem.Click += new System.EventHandler(this.manualDeUsuarioToolStripMenuItem_Click);
             // 
             // acerdaDeToolStripMenuItem
             // 
@@ -230,6 +233,7 @@
             this.acerdaDeToolStripMenuItem.Name = "acerdaDeToolStripMenuItem";
             this.acerdaDeToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.acerdaDeToolStripMenuItem.Text = "Acerca de...";
+            this.acerdaDeToolStripMenuItem.Click += new System.EventHandler(this.acerdaDeToolStripMenuItem_Click);
             // 
             // procesosManualesToolStripMenuItem
             // 
@@ -291,6 +295,7 @@
             // 
             // txtMensajes
             // 
+            this.txtMensajes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMensajes.Location = new System.Drawing.Point(6, 21);
             this.txtMensajes.Multiline = true;
             this.txtMensajes.Name = "txtMensajes";
@@ -325,7 +330,7 @@
             this.lblGrabar.BackColor = System.Drawing.Color.Transparent;
             this.lblGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGrabar.ForeColor = System.Drawing.Color.Red;
-            this.lblGrabar.Location = new System.Drawing.Point(524, 400);
+            this.lblGrabar.Location = new System.Drawing.Point(374, 399);
             this.lblGrabar.Name = "lblGrabar";
             this.lblGrabar.Size = new System.Drawing.Size(104, 20);
             this.lblGrabar.TabIndex = 27;
@@ -334,10 +339,10 @@
             // 
             // txt_time
             // 
-            this.txt_time.Location = new System.Drawing.Point(511, 160);
+            this.txt_time.Location = new System.Drawing.Point(534, 157);
             this.txt_time.Name = "txt_time";
             this.txt_time.ReadOnly = true;
-            this.txt_time.Size = new System.Drawing.Size(125, 20);
+            this.txt_time.Size = new System.Drawing.Size(88, 20);
             this.txt_time.TabIndex = 28;
             this.txt_time.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -382,7 +387,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Video_Captura_Robos_ESPOL.Properties.Resources.fondo_principal;
-            this.ClientSize = new System.Drawing.Size(640, 483);
+            this.ClientSize = new System.Drawing.Size(639, 482);
             this.Controls.Add(this.lblServicio);
             this.Controls.Add(this.txt_time);
             this.Controls.Add(this.lblGrabar);
@@ -395,7 +400,9 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "frm_principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema para video-captura de robos en pymes y hogares";
             this.Load += new System.EventHandler(this.frm_principal_Load);
             this.menuStrip1.ResumeLayout(false);

@@ -44,7 +44,19 @@ namespace Video_Captura_Robos_ESPOL
 
         private void buttonBrowseFolder_Click(object sender, EventArgs e)
         {
-            this.AddFolder();
+            if (cmb_escoger.Text == "Seleccionar...")
+            {
+                MessageBox.Show("Seleccione una opción", "Visualizador de Imágenes y Videos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (cmb_escoger.Text == "Imágenes") 
+            {
+                this.AddFolder();
+            }
+            else if (cmb_escoger.Text == "Videos")
+            {
+                this.flowLayoutPanelMain.Controls.Clear();
+                System.Diagnostics.Process.Start(@"C:\\Users\\Alex\\Documents\\Capturas_SALMON");
+            }
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -53,7 +65,14 @@ namespace Video_Captura_Robos_ESPOL
         }
 
         private void AddFolder()
-        {
+        {   
+            this.flowLayoutPanelMain.Controls.Clear();
+            m_Controller.AddFolder("C:\\Users\\Alex\\Documents\\Capturas_SALMON");
+            this.buttonCancel.Enabled = true;
+            this.buttonBrowseFolder.Enabled = false;
+
+            /* 
+             * SELECCIONANDO MANUALMENTE LA CARPETA
             FolderBrowserDialog dlg = new FolderBrowserDialog();
             dlg.Description = @"Choose folder path";
             if (dlg.ShowDialog() == DialogResult.OK)
@@ -63,6 +82,7 @@ namespace Video_Captura_Robos_ESPOL
                 this.buttonCancel.Enabled = true;
                 this.buttonBrowseFolder.Enabled = false;
             }
+            */
         }
 
         private void m_Controller_OnStart(object sender, ThumbnailControllerEventArgs e)

@@ -33,41 +33,41 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
-      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\AForge.NET Framework-2.2.5-(libs only)\Release\AForge.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
-      <HintPath>..\packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\AForge.NET Framework-2.2.5-(libs only)\Release\AForge.Controls.dll</HintPath>
     </Reference>
     <Reference Include="AForge.Genetic, Version=2.2.4.0, Culture=neutral, PublicKeyToken=4336634eeb41b69b, processorArchitecture=MSIL">
-      <HintPath>..\packages\AForge.Genetic.2.2.5\lib\AForge.Genetic.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\AForge.NET Framework-2.2.5-(libs only)\Release\AForge.Genetic.dll</HintPath>
     </Reference>
     <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
-      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\AForge.NET Framework-2.2.5-(libs only)\Release\AForge.Imaging.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="AForge.Imaging.Formats, Version=2.2.4.0, Culture=neutral, PublicKeyToken=8065ed5a639199a0, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\AForge.NET\Framework\Release\AForge.Imaging.Formats.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\AForge.NET Framework-2.2.5-(libs only)\Release\AForge.Imaging.Formats.dll</HintPath>
     </Reference>
     <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
-      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\AForge.NET Framework-2.2.5-(libs only)\Release\AForge.Math.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
-      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\AForge.NET Framework-2.2.5-(libs only)\Release\AForge.Video.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
-      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\AForge.NET Framework-2.2.5-(libs only)\Release\AForge.Video.DirectShow.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="aforge.video.vfw, Version=2.1.3.0, Culture=neutral, PublicKeyToken=a82f807c999637c8, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Downloads\aforge.video.vfw.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\AForge.NET Framework-2.2.5-(libs only)\Release\AForge.Video.VFW.dll</HintPath>
     </Reference>
     <Reference Include="AForge.Vision, Version=2.2.5.0, Culture=neutral, PublicKeyToken=b612fa915eefaa06, processorArchitecture=MSIL">
-      <HintPath>..\packages\AForge.Vision.2.2.5\lib\AForge.Vision.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\AForge.NET Framework-2.2.5-(libs only)\Release\AForge.Vision.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Live, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -76,13 +76,13 @@
     </Reference>
     <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Nemiro.OAuth">
-      <HintPath>..\packages\Nemiro.OAuth.1.10\lib\net45\Nemiro.OAuth.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\Libs\Nemiro.OAuth.1.10\lib\net45\Nemiro.OAuth.dll</HintPath>
     </Reference>
     <Reference Include="Nemiro.OAuth.LoginForms">
-      <HintPath>..\packages\Nemiro.OAuth.LoginForms.1.4\lib\net45\Nemiro.OAuth.LoginForms.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\Libs\Nemiro.OAuth.LoginForms.1.4\lib\net45\Nemiro.OAuth.LoginForms.dll</HintPath>
     </Reference>
     <Reference Include="NReco.VideoConverter">
-      <HintPath>..\..\libs\NReco.VideoConverter.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\Libs\NReco.VideoConverter.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -98,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthResult.cs" />
+    <Compile Include="frm_config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_config.Designer.cs">
+      <DependentUpon>frm_config.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_EnvioCorreos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     <Compile Include="VisorPrincipal.Designer.cs">
       <DependentUpon>VisorPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frm_config.resx">
+      <DependentUpon>frm_config.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_EnvioCorreos.resx">
       <DependentUpon>frm_EnvioCorreos.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +274,10 @@
     <None Include="Resources\menu_excep.png" />
     <None Include="Resources\menu_manual.png" />
     <None Include="Resources\menu_info.png" />
+    <None Include="Resources\buscar.png" />
+    <None Include="Resources\parar.png" />
+    <None Include="Resources\OK2.png" />
+    <None Include="Resources\config.png" />
     <Content Include="Scripts\typings\microsoft-live-connect\microsoft-live-connect.d.ts" />
     <Content Include="Scripts\typings\winjs\winjs-1.0.d.ts" />
     <Content Include="Scripts\typings\winjs\winjs-2.0.d.ts" />
