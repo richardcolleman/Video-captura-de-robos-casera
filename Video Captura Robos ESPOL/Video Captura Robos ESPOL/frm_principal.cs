@@ -32,8 +32,8 @@ namespace Video_Captura_Robos_ESPOL
         private Single motionAlarmLevel = 0.015F;
         private Bitmap foto=null,video=null;
         private bool IsRecording = false;
-        //private AVIWriter writer = new AVIWriter("wmv3");
-        private AVIWriter writer = new AVIWriter();
+        private AVIWriter writer = new AVIWriter("wmv3");
+        //private AVIWriter writer = new AVIWriter();
         private MailMessage mail;
         private Attachment Data;
         private DateTime time_stop = DateTime.MinValue;
@@ -49,11 +49,13 @@ namespace Video_Captura_Robos_ESPOL
 
         private void Carga_Dispositivos()
         {
-            for (int i = 0; i < Disp_Video.Count; i++)
+            int i;
+            for ( i = 0; i < Disp_Video.Count; i++)
             {
                 cmb_dispositivos.Items.Add(Disp_Video[i].Name.ToString());
             }
             cmb_dispositivos.Text = cmb_dispositivos.Items[0].ToString();
+            txtMensajes.Text += i.ToString() + " dispositivos encontrados!" + "\r\n";
         }
 
         private void Busca_Dispositivos()
@@ -110,10 +112,10 @@ namespace Video_Captura_Robos_ESPOL
                     //"Si hay Movimiento";
                     if (!IsRecording && timeLeft<=0)
                     {
-                        
+                        //txtMensajes.Text += "Inicio de grabación...! " + "\r\n";
                         time_stop = DateTime.Now.AddSeconds(10);
                         IsRecording = true;
-                        VideoFileName = "C:/Users/Alex/Documents/video_" + DateTime.Now.ToShortDateString().Replace("/", "-") + DateTime.Now.ToShortTimeString().Replace(":", "_") + ".avi";
+                        VideoFileName = "D:/video_" + DateTime.Now.ToShortDateString().Replace("/", "-") + DateTime.Now.ToShortTimeString().Replace(":", "_") + ".avi";
                         writer.Open(VideoFileName, video.Width, video.Height);
                         //FileWriter.Open("D:/video.avi", 320, 240, 25, VideoCodec.MPEG4, 5000000);
                     }
@@ -140,18 +142,26 @@ namespace Video_Captura_Robos_ESPOL
             {
                 Properties.Settings.Default.AccessToken = login.AccessToken.Value;
                 Properties.Settings.Default.Save();
+                txtMensajes.Text += "Inicio de sesión exitoso en Dropbox! " + "\r\n";
             }
             else
             {
+                txtMensajes.Text += "Inicio de sesión fallido en Dropbox..." + "\r\n";
                 MessageBox.Show("No se obtuvo acceso a su cuenta Dropbox, favor verificar antes de iniciar el servicio");
+                return;
             }
         }
         private void btn_iniciar_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(Properties.Settings.Default.AccessToken))
-                this.GetAccesToken();//*/
+            {
+                txtMensajes.Text += "Solicitando inicio de sesión en servidores de almacenamiento externo..." + "\r\n";
+                this.GetAccesToken();
+            }
+                
 
             // Start the timer.
+            txtMensajes.Text += "Cuenta regresiva para inicio del servicio!" + "\r\n";
             timeLeft = 30;
             lblServicio.Visible = true;
             lblServicio.Text = "El servicio iniciará en ... 30 segundos";
@@ -234,6 +244,7 @@ namespace Video_Captura_Robos_ESPOL
                         client.EnableSsl = true;
                         client.Send(mail);
                     }
+                    txtMensajes.Text += "Envío exitoso de e-mail...!" + "\r\n";
                     mail.Dispose();
                     Data.Dispose();
                     client.Dispose();
@@ -243,7 +254,7 @@ namespace Video_Captura_Robos_ESPOL
                 }catch(SmtpException exc)
                 {
                     //MessageBox.Show(exc.Message + "\n" + exc.StackTrace);
-                    txtMensajes.Text = exc.Message + "\n" + exc.StackTrace;
+                    txtMensajes.Text += exc.Message + "\r\n" + exc.StackTrace;
                     mail.Dispose();
                     Data.Dispose();
                     client.Dispose();
@@ -269,17 +280,17 @@ namespace Video_Captura_Robos_ESPOL
 
             if (result.StatusCode == 200)
             {
-                this.txtMensajes.Text="\nCarga de archivo exitosa";
+                this.txtMensajes.Text+="Carga de archivo exitosa!" + "\r\n";
             }
             else
             {
                 if (result["error"].HasValue)
                 {
-                    this.txtMensajes.Text="\n" + result["error"].ToString();
+                    this.txtMensajes.Text+= result["error"].ToString() + "\r\n";
                 }
                 else
                 {
-                    this.txtMensajes.Text="\n" + result.ToString();
+                    this.txtMensajes.Text+= result.ToString() + "\r\n";
                 }
             }
         }
@@ -319,18 +330,27 @@ namespace Video_Captura_Robos_ESPOL
                     //FileWriter.WriteVideoFrame(video);
                     if(time<time_stop.AddSeconds(-8))
                     {
-                        PhotoFileName = "C:/Users/Alex/Documents/photo_" + DateTime.Now.ToShortDateString().Replace("/", "-") + DateTime.Now.ToShortTimeString().Replace(":", "_") + ".png";
+                        //txtMensajes.Text += "Capturando la foto con imagen de movimiento" + "\r\n";
+                        PhotoFileName = "D:/photo_" + DateTime.Now.ToShortDateString().Replace("/", "-") + DateTime.Now.ToShortTimeString().Replace(":", "_") + ".png";
                         foto.Save(PhotoFileName, System.Drawing.Imaging.ImageFormat.Png);
                     }
                 }
                 else
                 {
+                    txtMensajes.Text += "Fin de la grabación...!" + "\r\n";
                     writer.Close();
 
+                    pcb_video.Image = Properties.Resources.offline;
                     //FileWriter.Close();
+                    txtMensajes.Text += "Compresión de video...!" + "\r\n";
                     ffMpeg.ConvertMedia(VideoFileName, VideoFileName.Replace(".avi",".mp4"), Format.mp4);
+                    txtMensajes.Text += "Intentando subir video a servidor de almacenamiento externo...!" + "\r\n";
                     subirArchivo(VideoFileName.Replace(".avi", ".mp4"));
-                    Body = "<a href='mailto:sist_segu_2015@hotmail.com?cc=aledcerv@espol.edu.ec&amp;subject=Ignorar%20Evento&amp;body=Se%20ha%20detectado%20movimiento%20en%20el%20sistema%20de%20seguridad%2C%20pero%20Ud.%20ha%20decidido%20ignorar%20este%20evento.%20El%20sistema%20detendr%C3%A1%20el%20servicio%20por%2030%20Minutos.'>IGNORAR</a>";
+                    txtMensajes.Text += "Video " + this.UploadFileName.Substring(8,UploadFileName.Length-8) +" cargado a servidor de almacenamiento externo...!" + "\r\n";
+                    txtMensajes.Text += "Envío de e-mail...!" + "\r\n";
+                    Body = "<a href='https://dl.dropboxusercontent.com/u/72924944/" + this.UploadFileName.Substring(8, UploadFileName.Length - 8) + "'>VIDEO</a>" +
+                            "<p>" +
+                            "<a href='mailto:sist_segu_2015@hotmail.com?cc=aledcerv@espol.edu.ec&amp;subject=Ignorar%20Evento&amp;body=Se%20ha%20detectado%20movimiento%20en%20el%20sistema%20de%20seguridad%2C%20pero%20Ud.%20ha%20decidido%20ignorar%20este%20evento.%20El%20sistema%20detendr%C3%A1%20el%20servicio%20por%2030%20Minutos.'>IGNORAR</a>";
                     enviar_Correo("ricardocoloma@hotmail.com", "ALERTA - Sistema de Seguridad ha detectado movimiento", Body);
                     IsRecording = false;
                     lblGrabar.Visible = false;
@@ -358,7 +378,7 @@ namespace Video_Captura_Robos_ESPOL
             if (timeLeft > 0)
             {
                 timeLeft = timeLeft - 1;
-                lblServicio.Text = "El servicio iniciará en ..." + timeLeft.ToString() + " seconds";
+                lblServicio.Text = "El servicio iniciará en ..." + timeLeft.ToString() + " segundos";
             }
             else
             {

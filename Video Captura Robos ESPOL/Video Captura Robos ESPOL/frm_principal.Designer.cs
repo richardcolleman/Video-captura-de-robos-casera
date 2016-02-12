@@ -171,7 +171,7 @@
             // 
             this.cámaraToolStripMenuItem.Image = global::Video_Captura_Robos_ESPOL.Properties.Resources.menu_camara;
             this.cámaraToolStripMenuItem.Name = "cámaraToolStripMenuItem";
-            this.cámaraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cámaraToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.cámaraToolStripMenuItem.Text = "Cámara";
             this.cámaraToolStripMenuItem.Click += new System.EventHandler(this.cámaraToolStripMenuItem_Click);
             // 
@@ -183,7 +183,7 @@
             this.excepcionesToolStripMenuItem});
             this.usuarioToolStripMenuItem.Image = global::Video_Captura_Robos_ESPOL.Properties.Resources.reg;
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.usuarioToolStripMenuItem.Text = "Registro";
             // 
             // usuarioToolStripMenuItem1
@@ -295,11 +295,13 @@
             // 
             // txtMensajes
             // 
+            this.txtMensajes.AcceptsReturn = true;
             this.txtMensajes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMensajes.Location = new System.Drawing.Point(6, 21);
             this.txtMensajes.Multiline = true;
             this.txtMensajes.Name = "txtMensajes";
             this.txtMensajes.ReadOnly = true;
+            this.txtMensajes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtMensajes.Size = new System.Drawing.Size(244, 174);
             this.txtMensajes.TabIndex = 3;
             // 
