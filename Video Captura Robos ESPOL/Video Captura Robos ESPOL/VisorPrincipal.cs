@@ -55,7 +55,7 @@ namespace Video_Captura_Robos_ESPOL
             else if (cmb_escoger.Text == "Videos")
             {
                 this.flowLayoutPanelMain.Controls.Clear();
-                System.Diagnostics.Process.Start(@"C:\\Users\\Alex\\Documents\\Capturas_SALMON");
+                System.Diagnostics.Process.Start(@"C:\\Users\\Alex\\Desktop\\DEMO");
             }
         }
 
@@ -67,7 +67,7 @@ namespace Video_Captura_Robos_ESPOL
         private void AddFolder()
         {   
             this.flowLayoutPanelMain.Controls.Clear();
-            m_Controller.AddFolder("C:\\Users\\Alex\\Documents\\Capturas_SALMON");
+            m_Controller.AddFolder("C:\\Users\\Alex\\Desktop\\DEMO");
             this.buttonCancel.Enabled = true;
             this.buttonBrowseFolder.Enabled = false;
 

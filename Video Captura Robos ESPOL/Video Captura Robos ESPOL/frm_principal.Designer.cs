@@ -241,8 +241,8 @@
             this.envíoDeCorreosToolStripMenuItem,
             this.subirAOneDriveToolStripMenuItem});
             this.procesosManualesToolStripMenuItem.Name = "procesosManualesToolStripMenuItem";
-            this.procesosManualesToolStripMenuItem.Size = new System.Drawing.Size(136, 21);
-            this.procesosManualesToolStripMenuItem.Text = "Procesos Manuales";
+            this.procesosManualesToolStripMenuItem.Size = new System.Drawing.Size(29, 21);
+            this.procesosManualesToolStripMenuItem.Text = "...";
             // 
             // envíoDeCorreosToolStripMenuItem
             // 

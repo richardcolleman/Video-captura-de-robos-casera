@@ -32,8 +32,7 @@ namespace Video_Captura_Robos_ESPOL
         private Single motionAlarmLevel = 0.015F;
         private Bitmap foto=null,video=null;
         private bool IsRecording = false;
-        private AVIWriter writer = new AVIWriter("wmv3");
-        //private AVIWriter writer = new AVIWriter();
+        private AVIWriter writer = new AVIWriter();
         private MailMessage mail;
         private Attachment Data;
         private DateTime time_stop = DateTime.MinValue;
@@ -115,7 +114,7 @@ namespace Video_Captura_Robos_ESPOL
                         //txtMensajes.Text += "Inicio de grabación...! " + "\r\n";
                         time_stop = DateTime.Now.AddSeconds(10);
                         IsRecording = true;
-                        VideoFileName = "D:/video_" + DateTime.Now.ToShortDateString().Replace("/", "-") + DateTime.Now.ToShortTimeString().Replace(":", "_") + ".avi";
+                        VideoFileName = "C:/Users/Alex/Desktop/DEMO/video_" + DateTime.Now.ToShortDateString().Replace("/", "-") + DateTime.Now.ToShortTimeString().Replace(":", "_") + ".avi";
                         writer.Open(VideoFileName, video.Width, video.Height);
                         //FileWriter.Open("D:/video.avi", 320, 240, 25, VideoCodec.MPEG4, 5000000);
                     }
@@ -331,7 +330,7 @@ namespace Video_Captura_Robos_ESPOL
                     if(time<time_stop.AddSeconds(-8))
                     {
                         //txtMensajes.Text += "Capturando la foto con imagen de movimiento" + "\r\n";
-                        PhotoFileName = "D:/photo_" + DateTime.Now.ToShortDateString().Replace("/", "-") + DateTime.Now.ToShortTimeString().Replace(":", "_") + ".png";
+                        PhotoFileName = "C:/Users/Alex/Desktop/DEMO/photo_" + DateTime.Now.ToShortDateString().Replace("/", "-") + DateTime.Now.ToShortTimeString().Replace(":", "_") + ".png";
                         foto.Save(PhotoFileName, System.Drawing.Imaging.ImageFormat.Png);
                     }
                 }
@@ -351,11 +350,10 @@ namespace Video_Captura_Robos_ESPOL
                     Body = "<a href='https://dl.dropboxusercontent.com/u/72924944/" + this.UploadFileName.Substring(8, UploadFileName.Length - 8) + "'>VIDEO</a>" +
                             "<p>" +
                             "<a href='mailto:sist_segu_2015@hotmail.com?cc=aledcerv@espol.edu.ec&amp;subject=Ignorar%20Evento&amp;body=Se%20ha%20detectado%20movimiento%20en%20el%20sistema%20de%20seguridad%2C%20pero%20Ud.%20ha%20decidido%20ignorar%20este%20evento.%20El%20sistema%20detendr%C3%A1%20el%20servicio%20por%2030%20Minutos.'>IGNORAR</a>";
-                    enviar_Correo("ricardocoloma@hotmail.com", "ALERTA - Sistema de Seguridad ha detectado movimiento", Body);
+                    enviar_Correo("alexcerv17@gmail.com", "ALERTA - Sistema de Seguridad ha detectado movimiento", Body);
                     IsRecording = false;
                     lblGrabar.Visible = false;
                     time_stop = DateTime.MinValue;
-                    
                 }
             }
                 

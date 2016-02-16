@@ -19,7 +19,17 @@ namespace Video_Captura_Robos_ESPOL
 
         private void frm_config_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void btn_guardarConfig_Click(object sender, EventArgs e)
+        {
+            //Properties.Settings.Default.AccessToken = login.AccessToken.Value;
+            Properties.Settings.Default.tiempoEsperaInicial = cmb_tiempoInicial.Text;
+            Properties.Settings.Default.calidadCaptura = cmb_calidad.Text;
+            Properties.Settings.Default.tamanoVideo = cmb_calidad.Text;
+            Properties.Settings.Default.tiempoCaptura = cmb_tiempo.Text;
+            MessageBox.Show("Configuración de la Cámara guardada exitosamente");
         }
     }
 }

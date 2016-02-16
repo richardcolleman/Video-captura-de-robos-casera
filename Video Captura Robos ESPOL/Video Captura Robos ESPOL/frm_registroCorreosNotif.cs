@@ -213,10 +213,11 @@ namespace Video_Captura_Robos_ESPOL
                     lines = string.Concat(lines, email5);
                     //MessageBox.Show(lines);
                 }
-                System.IO.StreamWriter file = new System.IO.StreamWriter("C:\\Users\\Alex\\Documents\\RegCorreos.txt");
+                System.IO.StreamWriter file = new System.IO.StreamWriter("C:\\Users\\Alex\\Desktop\\DEMO\\RegCorreos.txt");
+                Properties.Settings.Default.emailsNotificacion = lines;
                 file.Write(lines);
                 file.Close();
-                MessageBox.Show("Verifique el archivo de correos en C:\\Users\\Alex\\Documents\\RegCorreos.txt" + " - Sus correos registrados son: " + lines);
+                MessageBox.Show("Verifique el archivo de correos en C:\\Users\\Alex\\Desktop\\DEMO\\RegCorreos.txt" + " - Sus correos registrados son: " + lines);
             }
             else
             {

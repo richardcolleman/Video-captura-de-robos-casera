@@ -23,48 +23,15 @@ namespace Video_Captura_Robos_ESPOL.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string email1_notif {
+        public string emailsNotificacion {
             get {
-                return ((string)(this["email1_notif"]));
+                return ((string)(this["emailsNotificacion"]));
             }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string email2_notif {
-            get {
-                return ((string)(this["email2_notif"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string email3_notif {
-            get {
-                return ((string)(this["email3_notif"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string email4_notif {
-            get {
-                return ((string)(this["email4_notif"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string email5_notif {
-            get {
-                return ((string)(this["email5_notif"]));
+            set {
+                this["emailsNotificacion"] = value;
             }
         }
         
@@ -101,39 +68,51 @@ namespace Video_Captura_Robos_ESPOL.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string tiempoEsperaInicial {
             get {
                 return ((string)(this["tiempoEsperaInicial"]));
             }
+            set {
+                this["tiempoEsperaInicial"] = value;
+            }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string calidadCaptura {
             get {
                 return ((string)(this["calidadCaptura"]));
             }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string tamVideo {
-            get {
-                return ((string)(this["tamVideo"]));
+            set {
+                this["calidadCaptura"] = value;
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string tamanoVideo {
+            get {
+                return ((string)(this["tamanoVideo"]));
+            }
+            set {
+                this["tamanoVideo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string tiempoCaptura {
             get {
                 return ((string)(this["tiempoCaptura"]));
+            }
+            set {
+                this["tiempoCaptura"] = value;
             }
         }
     }

@@ -248,6 +248,9 @@ C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura 
 C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\uz\Nemiro.OAuth.LoginForms.resources.dll
 C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\vi\Nemiro.OAuth.LoginForms.resources.dll
 C:\Users\Dylan-Ian\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\zh\Nemiro.OAuth.LoginForms.resources.dll
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.frm_config.resources
 C:\Users\Alex\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\Video Captura Robos ESPOL.exe.config
 C:\Users\Alex\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\Video Captura Robos ESPOL.exe
 C:\Users\Alex\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\Video Captura Robos ESPOL.pdb
@@ -335,6 +338,3 @@ C:\Users\Alex\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos
 C:\Users\Alex\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video Captura Robos ESPOL.csproj.GenerateResource.Cache
 C:\Users\Alex\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video Captura Robos ESPOL.exe
 C:\Users\Alex\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video Captura Robos ESPOL.pdb
-C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
-C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
-C:\Users\rcoloma.CORPCNEL\Documents\GitHub\Video-captura-de-robos-casera\Video Captura Robos ESPOL\Video Captura Robos ESPOL\obj\Debug\Video_Captura_Robos_ESPOL.frm_config.resources

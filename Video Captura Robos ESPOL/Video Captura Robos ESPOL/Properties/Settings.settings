@@ -2,19 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Video_Captura_Robos_ESPOL.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="email1_notif" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="email2_notif" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="email3_notif" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="email4_notif" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="email5_notif" Type="System.String" Scope="Application">
+    <Setting Name="emailsNotificacion" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="AccessToken" Type="System.String" Scope="User">
@@ -26,16 +14,16 @@
     <Setting Name="pathLocal" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="tiempoEsperaInicial" Type="System.String" Scope="Application">
+    <Setting Name="tiempoEsperaInicial" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="calidadCaptura" Type="System.String" Scope="Application">
+    <Setting Name="calidadCaptura" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="tamVideo" Type="System.String" Scope="Application">
+    <Setting Name="tamanoVideo" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="tiempoCaptura" Type="System.String" Scope="Application">
+    <Setting Name="tiempoCaptura" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>
